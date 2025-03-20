@@ -20,7 +20,8 @@ public class JoinMainV3 {
 
         //스레드가 종료 될때 까지 대기
         log("join() - main 스레드가 thread1,2 종료까지 대기합니다");
-        thread1.join(1000); //terminated 될때까지 무기한 waiting , 시간을 넘기면 해당 시간까지만 대기한다.
+        thread1.join(1000); //terminated 될때까지 무기한!! waiting , 시간을 넘기면 해당 시간까지만 대기한다.
+
        // thread2.join();
         log("join 완료 main스레드 대기 완료");
 
@@ -52,7 +53,7 @@ public class JoinMainV3 {
             log("작업 시작");
 
 
-            sleep(2000);
+            sleep(500);
             int sum = 0;
             for(int i=startValue; i<endValue; i++){
                 sum += i;
